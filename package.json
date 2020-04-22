@@ -1,0 +1,15 @@
+{
+  "name": "ondine",
+  "version": "1.0.0",
+  "description": "see what people are saying about Ondine.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RobotMermaid",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  }
+}
