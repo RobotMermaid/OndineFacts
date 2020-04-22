@@ -1,24 +1,23 @@
 const express = require('express')
 const app = express()
+app.set('view engine', 'pug');
+app.use(express.static(__dirname + '/public'));
 
 const port = 3000
-const facts = require('./models/facts' )
-
+const facts = require('./data/facts.json' )
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-let int = getRandomIntInclusive(1, 3);
+
+let max = facts.fact.length -1;
 
 app.get('/', (req, res) => {
-  res.send(facts.facts[int])
-});
-
-
-// app.get('/jean', (req, res) => {
-//      res.render('index', data.artist[2])
-//  })
+  let int = getRandomIntInclusive(1, max)
+  console.log("~", int)
+  res.render('index', facts.fact[int])
+ })
 
 app.listen(port, () => {
   console.log('To infinity and beyond!');

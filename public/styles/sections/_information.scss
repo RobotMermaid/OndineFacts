@@ -1,0 +1,25 @@
+.information{
+	margin-top: 35vh;
+	padding: 40px 0 220px 30px;
+	z-index: 3;
+	position: relative;
+	background: white;
+	@include b(950){
+		margin-top: 0;
+		padding: 70px 0 0 30px;
+	}
+	@include b(1570){
+    padding: 100px 100px 0 100px;
+  }
+	&__description{
+		color: $gray;
+		width: 70%;
+		margin: 30px auto auto 55px;
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+		@include b(700) {
+	    font-size: 1.7rem;
+		line-height: 2.5rem;
+	  }
+	}
+}

@@ -10,6 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "body-parser": "^1.19.0"
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-preset-stage-3": "^6.22.0",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-es2015-node5": "*",
+    "babel-register": "*"
   }
 }
